@@ -1,0 +1,509 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    width: 100vw;
+}
+
+.content{
+    display: inline-block;
+    min-height: 400px;
+    width: 1250px;
+    height: auto;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.25);
+    margin-top: 20px;
+    padding: 20px;
+    font-family: 'Trispace', sans-serif;
+    text-align: left;
+    user-select: none;
+}
+
+
+.button-one{
+    height: 60px;
+    width: 180px;
+    text-align: center;
+    line-height: 60px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: solid 2px #764abc;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.button-one::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #764abc;
+    transition: all 0.5s;
+    z-index: -1;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.button-one:hover::before{
+    opacity: 1;
+    transform: translateX(-0%);
+}
+
+.button-text{
+    font-size: 20px;
+    z-index: 5;
+    color: #764abc;
+    transform: translateY(-2px);
+    transition: color 0.5s;
+}
+
+.button-one:hover .button-text{
+    color: white;
+}
+
+
+.button-two{
+    height: 60px;
+    width: 180px;
+    text-align: center;
+    line-height: 60px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: solid 2px rgb(37, 183, 37);
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.button-text-two{
+    font-size: 20px;
+    z-index: 5;
+    color: rgb(37, 183, 37);
+    transform: translateY(-2px);
+    transition: color 0.5s;
+}
+
+
+.button-two::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-color: rgb(37, 183, 37);
+    transition: all 0.5s;
+    z-index: -1;
+    transform: translateX(-100%) rotate(45deg);
+    opacity: 0;
+
+}
+
+.button-two::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-color: rgb(37, 183, 37);
+    transition: all 0.5s;
+    z-index: -1;
+    transform: translateX(100%) rotate(45deg) translateY(-50px);
+    opacity: 0;
+}
+
+.button-two:hover::after{
+    opacity: 1;
+    transform: translateX(12%) rotate(45deg) translateY(-50px);
+}
+
+.button-two:hover::before{
+    opacity: 1;
+    transform: translateX(-15%) rotate(45deg);
+}
+
+.button-two:hover .button-text-two{
+    color: white;
+}
+
+.button-three{
+    height: 60px;
+    width: 180px;
+    line-height: 60px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 20px;
+    transition: all 0.2s;
+    margin-bottom: 20px;
+}
+
+.button-three-text{
+    display: inline-block;
+    font-size: 18px;
+    position: absolute;
+    right: 15px;
+    color: #764abc;
+    top: -2px;
+}
+
+.button-three-left{
+    width: 50px;
+    height: 54px;
+    background-color: #764abc;
+    position: absolute;
+    left: 0px;
+    transition: all 0.2s;
+}
+
+.button-three-left-under{
+    width: 50px;
+    height: 6px;
+    left: 0px;
+    bottom: 0px;
+    position: absolute;
+    background-color: #613e98;
+    transition: all 0.2s;
+}
+
+.button-three-right{
+    width: 150px;
+    height: 54px;
+    background-color: #ddc9fe;
+    position: absolute;
+    left: 50px;
+    transition: all 0.2s;
+}
+
+.button-three-icon{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background-image: url('./icons/like.svg');
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -5px;
+}
+
+.button-three-right-under{
+    width: 150px;
+    height: 6px;
+    background-color: #b8a8d3;
+    left: 50px;
+    bottom: 0px;
+    position: absolute;
+    transition: all 0.2s;
+}
+
+.button-three:active .button-three-left{
+    height: 56px;
+}
+
+.button-three:active .button-three-left-under{
+    height: 4px;
+}
+
+.button-three:active .button-three-right{
+    height: 56px;
+}
+
+.button-three:active .button-three-right-under{
+    height: 4px;
+}
+
+.button-three:active{
+    transform: translateY(2px);
+}
+
+.loading-spinner{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+    border-radius: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.inner-loading-spinner{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    overflow: hidden;
+    animation: 1s infinite spinner linear;
+}
+
+.inner-loading-spinner-tab{
+    width: 60px;
+    height: 30px;
+    background-color: #1a90ff;
+    position: absolute;
+    top: -4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 30% 100%);
+}
+
+.inner-circle{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes spinner{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.button-four{
+    width: 160px;
+    height: 60px;
+    margin-right: 20px;
+    background-image: linear-gradient(to right top, #d011e3, #ad46f2, #855dfa, #576dfc, #0378f8);
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    z-index: 5;
+    vertical-align: top;
+    line-height: 60px;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.button-four-bg-vertical{
+    content: "";
+    width: 120px;
+    height: 60px;
+    background-color: white;
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    display: inline-block;
+    z-index: -5;
+    transition: all 0.5s;
+}
+
+.button-four-bg-horizontal{
+    content: "";
+    width: 160px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    display: inline-block;
+    z-index: -5;
+    transition: all 0.5s;
+}
+
+.button-four-bg-middle{
+    content: "";
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    display: inline-block;
+    z-index: -5;
+    transition: all 0.5s;
+}
+
+.button-four-text{
+    font-size: 22px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right top, #d011e3, #ad46f2, #855dfa, #576dfc, #0378f8);
+    transition: all 0.5s;
+}
+
+.button-four:hover .button-four-text{
+    -webkit-text-fill-color: white;
+}
+
+.button-four::before{
+    content: "";
+    width: 160px;
+    height: 60px;
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    top: 0px;
+    background-image: linear-gradient(to right top, #d011e3, #ad46f2, #855dfa, #576dfc, #0378f8);
+    transform: translateX(-160px);
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.button-four:hover::before{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.button-five{
+    width: 190px;
+    height: 60px;
+    border-radius: 40px;
+    background-image: linear-gradient(to right top, #e3cf00, #ebc805, #f3c10f, #f9b91a, #ffb223);
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    line-height: 60px;
+    padding-left: 20px;
+    cursor: pointer;
+    box-shadow: inset 2px 2px 4px 2px rgba(0, 0, 0, 0.108);
+    overflow: hidden;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.button-five-circle{
+    width: 200px;
+    height: 60px;
+    background-color: rgb(255, 244, 208);
+    display: inline-block;
+    position: relative;
+    border-radius: 40px;
+    vertical-align: top;
+    position: absolute;
+    right: -140px;
+    transition: all 0.5s;
+    z-index: 0
+}
+
+.button-five:hover .button-five-circle{
+    right: 0px;
+}
+
+.button-five-text{
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    margin-right: 5px;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: 5
+}
+
+.button-five:hover .button-five-text{
+    color: black;
+}
+
+.button-five-icon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background-image: url('./icons/home.svg');
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.button-six{
+    width: 60px;
+    height: 60px;
+    background-color: rgb(201, 201, 201);
+    display: inline-block;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.button-six::before{
+    content: "";
+    position: absolute;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    width: 60px;
+    height: 60px;
+    background-color: rgb(218, 218, 218);
+}
+
+.button-six-icon{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-image: url('./icons/settings.svg');
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.button-six:hover .button-six-icon{
+    transform: rotate(180deg);
+}
+
+.button-seven{
+    width: 150px;
+    height: 60px;
+    border: black solid 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.button-seven-text{
+    font-size: 18px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+.button-seven::before{
+    content: "";
+    width: 150px;
+    height: 60px;
+    position: absolute;
+    display: inline-block;
+    background-color: rgb(255, 70, 128);
+    opacity: 0.8;
+    transform: translate(10px, 10px);
+    z-index: -1;
+    transition: all 0.2s;
+}
+
+.button-seven:hover::before{
+    transform: translate(-2px, -2px);
+    opacity: 1;
+}
