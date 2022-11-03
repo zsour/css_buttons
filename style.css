@@ -687,3 +687,37 @@ body{
         transform: translate(-50%, -50%) rotate(5deg);
     }
 }
+
+
+.button-ten{
+    width: 160px;
+    height: 60px;
+    border: black solid 2px;
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    line-height: 60px;
+    text-align: center;
+}
+
+.button-ten-span{
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: rgb(41, 211, 41);
+    transition: all 0.2s;
+    opacity: 0;
+    z-index: -1;
+}
+
+.button-ten-text{
+    font-size: 20px;
+    color: black;
+    transition: color 0.8s;
+}
+
+.button-ten:hover .button-ten-text{
+    color: white;
+}
